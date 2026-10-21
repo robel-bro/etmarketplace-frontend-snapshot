@@ -1,0 +1,34 @@
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+
+const resources = {
+  en: {
+    translation: {
+      welcome: 'Welcome to ET Marketplace',
+      login: 'Login',
+      register: 'Register',
+      logout: 'Logout',
+    }
+  },
+  am: {
+    translation: {
+      welcome: 'እንኳን ወደ ኢት ማርኬት መጡ',
+      login: 'ግባ',
+      register: 'ተመዝገብ',
+      logout: 'ውጣ',
+    }
+  }
+};
+
+i18n
+  .use(initReactI18next)
+  .init({
+    resources,
+    lng: 'en',
+    fallbackLng: 'en',
+    interpolation: {
+      escapeValue: false,
+    },
+  });
+
+export default i18n;
